@@ -4,8 +4,21 @@
     
   <head>
   <body>  
-    <h1>Hi There!</h1>
+    <div>
+      <h1>This is my test blog</h1>
+    </div>
+    
     <p>It works. Something new.<p>
+     
+      {% for post in posts %}
+      <div>
+	<p>published: {{post.published_date }}</p>
+	<h1><a href="">{{ post.title}}</a></h1>
+	<p>{{ post.text|linebreaksbr }}</p>
+      </div>
+      
+	
+      {% endfor %}
   </body>
   
 </html>
